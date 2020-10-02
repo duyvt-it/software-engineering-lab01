@@ -19,7 +19,7 @@ def inputError() :
 	if enterTaskField.get() == "" : 
 		
 		# show the error message 
-		messagebox.showerror("Input Error") 
+		messagebox.showerror("Input Error", "Chưa thêm task")
 		
 		return 0
 	
@@ -76,7 +76,7 @@ def delete() :
 	
 	# handling the empty task error 
 	if len(tasks_list) == 0 : 
-		messagebox.showerror("No task") 
+		messagebox.showerror("Delete Error", "Không còn task") 
 		return
 
 	# get the task number, which is required to delete 
@@ -85,7 +85,7 @@ def delete() :
 	# checking for input error when 
 	# empty input in task number field 
 	if number == "\n" : 
-		messagebox.showerror("input error") 
+		messagebox.showerror("Error", "Dữ liệu nhập vào trống") 
 		return
 	
 	else : 
